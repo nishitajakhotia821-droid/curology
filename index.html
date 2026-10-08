@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Curology is a luxury skincare brand blending thoughtful formulas, premium ingredients, and modern rituals for radiant everyday beauty."
+    />
+    <title>Curology | Luxury Skincare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="#home" class="logo" aria-label="Curology home">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="Curology emblem">
+              <path d="M32 8c8 10 11 15 11 23 0 7-5 14-11 19-6-5-11-12-11-19 0-8 3-13 11-23zm0 10c-3 4-5 8-5 13 0 5 2 9 5 12 3-3 5-7 5-12 0-5-2-9-5-13zm-9 4c3 5 4 9 4 15 0 7-3 12-9 18 0-9 1-17 5-33zm18 0c-3 5-4 9-4 15 0 7 3 12 9 18 0-9-1-17-5-33z" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="logo-text">CUROLOGY</span>
+        </a>
+
+        <div class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#shop" class="nav-link">Shop</a>
+          <a href="#skincare" class="nav-link">Skincare</a>
+          <a href="#haircare" class="nav-link">Haircare</a>
+          <a href="#bodycare" class="nav-link">Bodycare</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#rituals" class="nav-link">Rituals</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions" aria-label="Quick actions">
+          <button class="icon-btn search-toggle" type="button" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="icon-btn" type="button" aria-label="Account">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <button class="icon-btn wishlist-toggle" type="button" aria-label="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <button class="icon-btn bag-toggle" type="button" aria-label="Shopping bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-background" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">EST. 2026</p>
+            <h1>
+              YOUR SKIN'S STORY<br />
+              STARTS HERE.
+            </h1>
+            <p class="lead">
+              Thoughtfully crafted skincare rituals designed to make every moment of self-care feel special.
+            </p>
+            <div class="hero-actions">
+              <a href="#shop" class="btn btn-primary">SHOP SKINCARE</a>
+              <a href="#about" class="btn btn-secondary">DISCOVER OUR STORY</a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong data-count="12000">0</strong>
+                <span>happy rituals</span>
+              </div>
+              <div>
+                <strong data-count="96">0</strong>
+                <span>ingredient stories</span>
+              </div>
+              <div>
+                <strong data-count="4.9">0</strong>
+                <span>average rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="product-orbit product-orbit-one"></div>
+            <div class="product-orbit product-orbit-two"></div>
+            <div class="hero-product hero-product-main">
+              <img
+                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80"
+                alt="Luxury skincare serum bottle"
+              />
+            </div>
+            <div class="hero-product hero-product-small">
+              <img
+                src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80"
+                alt="Skincare cream and bottle"
+              />
+            </div>
+            <div class="hero-card">
+              <span>Best-selling ritual</span>
+              <strong>Niacinamide Glow Set</strong>
+              <small>₹8,000</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro section" id="skincare">
+        <div class="container intro-inner reveal">
+          <p class="section-label">THE CUROLOGY PHILOSOPHY</p>
+          <h2>“Beautiful skin begins with a beautiful ritual.”</h2>
+          <p>
+            Curology combines carefully selected ingredients, thoughtful formulations, and elegant self-care experiences
+            to help you slow down and reconnect with your skin. Every formula is crafted to feel luxurious, effective, and personal.
+          </p>
+        </div>
+      </section>
+
+      <section class="category section" id="shop">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">SHOP BY CATEGORY</p>
+            <h2>Designed for every part of your ritual.</h2>
+          </div>
+
+          <div class="category-grid">
+            <article class="category-card reveal">
+              <div class="category-image">
+                <img
+                  src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80"
+                  alt="Face skincare products"
+                />
+              </div>
+              <div class="category-content">
+                <h3>FACE</h3>
+                <p>Serums • Cleansers • Masks • Scrubs</p>
+              </div>
+            </article>
+
+            <article class="category-card reveal">
+              <div class="category-image">
+                <img
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
+                  alt="Haircare products"
+                />
+              </div>
+              <div class="category-content">
+                <h3>HAIR</h3>
+                <p>Shampoo • Conditioner • Hair Masks • Oils</p>
+              </div>
+            </article>
+
+            <article class="category-card reveal">
+              <div class="category-image">
+                <img
+                  src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=800&q=80"
+                  alt="Bodycare collection"
+                />
+              </div>
+              <div class="category-content">
+                <h3>BODY</h3>
+                <p>Body Lotion • Body Oil • Soap • Cream</p>
+              </div>
+            </article>
+
+            <article class="category-card reveal">
+              <div class="category-image">
+                <img
+                  src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80"
+                  alt="Lipcare products"
+                />
+              </div>
+              <div class="category-content">
+                <h3>LIPS</h3>
+                <p>Lip Balm • Lip Scrub • Lip Oil • Lip Gloss</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bestsellers section" id="bestsellers">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">BESTSELLERS</p>
+            <h2>Luxury essentials your skin keeps reaching for.</h2>
+          </div>
+
+          <div class="product-filters reveal" aria-label="Product categories">
+            <button class="filter-btn active" type="button" data-filter="all">ALL</button>
+            <button class="filter-btn" type="button" data-filter="Face">FACE</button>
+            <button class="filter-btn" type="button" data-filter="Hair">HAIR</button>
+            <button class="filter-btn" type="button" data-filter="Body">BODY</button>
+            <button class="filter-btn" type="button" data-filter="Lips">LIPS</button>
+          </div>
+
+          <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="ingredients section" id="ingredients">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">INGREDIENT STORIES</p>
+            <h2>THE INGREDIENTS BEHIND THE RITUAL</h2>
+          </div>
+
+          <div class="ingredient-grid">
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=700&q=80" alt="Niacinamide ingredient" />
+              <div class="ingredient-copy">
+                <h3>Niacinamide</h3>
+                <p>Brightens and refines texture for a smoother, more even glow.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=700&q=80" alt="Vitamin C ingredient" />
+              <div class="ingredient-copy">
+                <h3>Vitamin C</h3>
+                <p>Helps boost radiance and defend against daily environmental stress.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=700&q=80" alt="Rose ingredient" />
+              <div class="ingredient-copy">
+                <h3>Rose</h3>
+                <p>Comforting and hydrating with soft floral notes and soothing benefits.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=700&q=80" alt="Aloe Vera ingredient" />
+              <div class="ingredient-copy">
+                <h3>Aloe Vera</h3>
+                <p>Deeply calming and refreshing for skin that feels hydrated and balanced.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=80" alt="Green tea ingredient" />
+              <div class="ingredient-copy">
+                <h3>Green Tea</h3>
+                <p>Antioxidant-rich support that helps skin feel fresh and resilient.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?auto=format&fit=crop&w=700&q=80" alt="Oatmeal ingredient" />
+              <div class="ingredient-copy">
+                <h3>Oatmeal</h3>
+                <p>Gently softens and comforts sensitive, dry, or irritated skin.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?auto=format&fit=crop&w=700&q=80" alt="Coffee ingredient" />
+              <div class="ingredient-copy">
+                <h3>Coffee</h3>
+                <p>Helps energize and de-puff with a fresh, revitalizing finish.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80" alt="Walnut ingredient" />
+              <div class="ingredient-copy">
+                <h3>Walnut</h3>
+                <p>Natural exfoliating benefits for smoother, renewed skin texture.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80" alt="Tea tree ingredient" />
+              <div class="ingredient-copy">
+                <h3>Tea Tree</h3>
+                <p>Clarifying and balancing support for a fresher complexion.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=700&q=80" alt="Argan ingredient" />
+              <div class="ingredient-copy">
+                <h3>Argan</h3>
+                <p>Nourishing and smoothing for soft, glossy hair and skin.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=700&q=80" alt="Shea butter ingredient" />
+              <div class="ingredient-copy">
+                <h3>Shea Butter</h3>
+                <p>Rich, creamy moisture that helps restore softness and comfort.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+
+            <article class="ingredient-card reveal">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=80" alt="Caffeine ingredient" />
+              <div class="ingredient-copy">
+                <h3>Caffeine</h3>
+                <p>Targets tired-looking skin while helping create a luminous finish.</p>
+                <button type="button">Learn More</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ritual section" id="rituals">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">RITUALS</p>
+            <h2>CREATE YOUR DAILY RITUAL</h2>
+          </div>
+
+          <div class="ritual-timeline">
+            <article class="ritual-step reveal">
+              <span class="step-number">01</span>
+              <div>
+                <h3>CLEANSE</h3>
+                <p>Start fresh.</p>
+              </div>
+            </article>
+            <article class="ritual-step reveal">
+              <span class="step-number">02</span>
+              <div>
+                <h3>TREAT</h3>
+                <p>Give your skin what it needs.</p>
+              </div>
+            </article>
+            <article class="ritual-step reveal">
+              <span class="step-number">03</span>
+              <div>
+                <h3>HYDRATE</h3>
+                <p>Lock in lasting moisture.</p>
+              </div>
+            </article>
+            <article class="ritual-step reveal">
+              <span class="step-number">04</span>
+              <div>
+                <h3>PROTECT</h3>
+                <p>Finish with daily protection.</p>
+              </div>
+            </article>
+            <article class="ritual-step reveal">
+              <span class="step-number">05</span>
+              <div>
+                <h3>REPEAT</h3>
+                <p>Make self-care a habit.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-product section" id="featured">
+        <div class="container featured-grid reveal">
+          <div class="featured-image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=1200&q=80"
+              alt="Niacinamide serum bottle"
+            />
+          </div>
+
+          <div class="featured-content">
+            <p class="section-label">FEATURED PRODUCT</p>
+            <h2>NIACINAMIDE<br />BRIGHTENING SERUM</h2>
+            <p class="featured-copy">
+              Lightweight care for a smoother, brighter-looking complexion.
+            </p>
+
+            <ul class="feature-list">
+              <li><span>Key ingredients</span><strong>Niacinamide, Oat, Rosewater</strong></li>
+              <li><span>Skin type</span><strong>All skin types</strong></li>
+              <li><span>Texture</span><strong>Silky, weightless serum</strong></li>
+              <li><span>How to use</span><strong>Apply 2–3 drops morning and night</strong></li>
+            </ul>
+
+            <div class="featured-meta">
+              <div class="price-wrap">
+                <span class="price-tag">₹3,700</span>
+                <div class="stars" aria-label="4.8 out of 5">★★★★★</div>
+              </div>
+
+              <div class="purchase-panel">
+                <div class="quantity-selector" aria-label="Quantity selector">
+                  <button type="button" class="qty-btn" data-action="decrease">−</button>
+                  <span class="quantity-value">1</span>
+                  <button type="button" class="qty-btn" data-action="increase">+</button>
+                </div>
+                <button type="button" class="btn btn-primary add-to-bag" data-product-id="niacinamide-serum">ADD TO BAG</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-banner section" id="about">
+        <div class="container story-grid reveal">
+          <div class="story-copy">
+            <p class="section-label">ABOUT CUROLOGY</p>
+            <h2>EVERY FORMULA HAS A STORY.</h2>
+            <p>
+              We believe skincare should feel like a ritual — meaningful, restorative, and deeply personal. Each Curology
+              formula is built around quality ingredients, elegant textures, and a sense of calm that lets your skin feel cared for.
+            </p>
+            <a href="#contact" class="btn btn-secondary">OUR STORY</a>
+          </div>
+          <div class="story-visual">
+            <div class="story-card story-card-large">
+              <img
+                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80"
+                alt="Luxury skincare bottles"
+              />
+            </div>
+            <div class="story-card story-card-small">
+              <img
+                src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80"
+                alt="Botanical skincare ingredients"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-section section">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">WHY CUROLOGY</p>
+            <h2>Thoughtful care, premium results.</h2>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card reveal">
+              <div class="why-icon"><i class="fa-solid fa-leaf"></i></div>
+              <h3>Thoughtfully Formulated</h3>
+              <p>Carefully selected ingredients and purposeful formulations.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+              <h3>Quality First</h3>
+              <p>Designed with attention to quality and consistency.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+              <h3>Everyday Rituals</h3>
+              <p>Simple products that fit naturally into daily routines.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon"><i class="fa-solid fa-gem"></i></div>
+              <h3>Premium Experience</h3>
+              <p>Skincare designed to feel as beautiful as it performs.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon"><i class="fa-solid fa-heart"></i></div>
+              <h3>Made With Care</h3>
+              <p>Every detail matters, from formula to packaging.</p>
+            </article>
+            <article class="why-card reveal">
+              <div class="why-icon"><i class="fa-solid fa-seedling"></i></div>
+              <h3>For Your Story</h3>
+              <p>Because every skin journey is different.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-banner section haircare-banner" id="haircare">
+        <div class="container banner-inner reveal">
+          <div class="banner-copy">
+            <p class="section-label">HAIRCARE</p>
+            <h2>YOUR HAIR DESERVES ITS OWN STORY.</h2>
+          </div>
+          <div class="banner-products">
+            <div class="mini-bottle b1">Onion Shampoo</div>
+            <div class="mini-bottle b2">Keratin Mask</div>
+            <div class="mini-bottle b3">Argan Oil</div>
+            <div class="mini-bottle b4">Coconut Oil</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bodycare section" id="bodycare">
+        <div class="container bodycare-inner reveal">
+          <div class="bodycare-copy">
+            <p class="section-label">BODYCARE</p>
+            <h2>A LITTLE LUXURY, FROM HEAD TO TOE.</h2>
+            <ul>
+              <li>Aloe Vera Body Lotion</li>
+              <li>Aloe Vera Soap</li>
+              <li>Almond Body Oil</li>
+              <li>Shea Butter</li>
+              <li>Vanilla Cream</li>
+            </ul>
+          </div>
+          <div class="bodycare-visual">
+            <img
+              src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80"
+              alt="Luxury bodycare essentials"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="lipcare section">
+        <div class="container lipcare-inner reveal">
+          <div class="lipcare-visual">
+            <img
+              src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80"
+              alt="Lipcare products"
+            />
+          </div>
+          <div class="lipcare-copy">
+            <p class="section-label">LIPCARE</p>
+            <h2>Soft, hydrated, and beautifully kissed.</h2>
+            <div class="lip-list">
+              <span>Strawberry Lip Balm</span>
+              <span>Strawberry Lip Gloss</span>
+              <span>Coffee Lip Scrub</span>
+              <span>Rose Lip Oil</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section" aria-label="Customer testimonials">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">OUR COMMUNITY</p>
+            <h2>What our clients are saying.</h2>
+          </div>
+
+          <div class="testimonial-slider reveal">
+            <button class="slider-btn prev-btn" type="button" aria-label="Previous testimonial">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <div class="testimonial-track">
+              <article class="testimonial-item active">
+                <div class="avatar-wrap">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Customer portrait" />
+                </div>
+                <div class="testimonial-content">
+                  <div class="stars">★★★★★</div>
+                  <p>
+                    “Curology has completely changed the way I enjoy my skincare routine. Everything feels so thoughtful and luxurious.”
+                  </p>
+                  <h3>Amelia R.</h3>
+                </div>
+              </article>
+
+              <article class="testimonial-item">
+                <div class="avatar-wrap">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Customer portrait" />
+                </div>
+                <div class="testimonial-content">
+                  <div class="stars">★★★★★</div>
+                  <p>
+                    “The textures are divine and the packaging is gorgeous. My skin feels smoother and much more radiant in just weeks.”
+                  </p>
+                  <h3>Daniel M.</h3>
+                </div>
+              </article>
+
+              <article class="testimonial-item">
+                <div class="avatar-wrap">
+                  <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=500&q=80" alt="Customer portrait" />
+                </div>
+                <div class="testimonial-content">
+                  <div class="stars">★★★★★</div>
+                  <p>
+                    “I love how every detail feels intentional. The rituals are easy to follow and the results speak for themselves.”
+                  </p>
+                  <h3>Sofia L.</h3>
+                </div>
+              </article>
+            </div>
+
+            <button class="slider-btn next-btn" type="button" aria-label="Next testimonial">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">FOLLOW THE STORY</p>
+            <h2>@curology</h2>
+          </div>
+
+          <div class="instagram-grid">
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80" alt="Skincare flatlay" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80" alt="Self-care routine" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=900&q=80" alt="Botanical ingredient closeup" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=80" alt="Skincare products on counter" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" alt="Beauty still life" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Luxury skincare beauty portrait" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80" alt="Product set with leaves" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80" alt="Botanical skincare composition" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+            <button type="button" class="gallery-card reveal" data-gallery-image="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=900&q=80">
+              <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=900&q=80" alt="Skincare product with candles" />
+              <span class="gallery-overlay"><i class="fa-brands fa-instagram"></i></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter section" id="contact">
+        <div class="container newsletter-inner reveal">
+          <p class="section-label">JOIN THE STORY</p>
+          <h2>A LITTLE SECRET FOR YOUR INBOX.</h2>
+          <p>
+            Join us for skincare rituals, beauty stories, new launches and exclusive offers.
+          </p>
+
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              name="email"
+              placeholder="Your email address"
+              aria-label="Your email address"
+              required
+            />
+            <button type="submit" class="btn btn-primary">JOIN THE STORY</button>
+          </form>
+
+          <p class="newsletter-message" id="newsletterMessage" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" aria-label="Curology emblem">
+                <path d="M32 8c8 10 11 15 11 23 0 7-5 14-11 19-6-5-11-12-11-19 0-8 3-13 11-23zm0 10c-3 4-5 8-5 13 0 5 2 9 5 12 3-3 5-7 5-12 0-5-2-9-5-13zm-9 4c3 5 4 9 4 15 0 7-3 12-9 18 0-9-1-17-5-33zm18 0c-3 5-4 9-4 15 0 7 3 12 9 18 0-9-1-17-5-33z" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="logo-text">CUROLOGY</span>
+          </a>
+        </div>
+
+        <div>
+          <h3>SHOP</h3>
+          <ul>
+            <li><a href="#shop">Face</a></li>
+            <li><a href="#haircare">Hair</a></li>
+            <li><a href="#bodycare">Body</a></li>
+            <li><a href="#shop">Lips</a></li>
+            <li><a href="#bestsellers">Bestsellers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>ABOUT</h3>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#ingredients">Ingredients</a></li>
+            <li><a href="#rituals">Rituals</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>HELP</h3>
+          <ul>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>CONNECT</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 CUROLOGY. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+      <div class="search-panel">
+        <button class="close-search" type="button" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Search our rituals</h2>
+        <div class="search-field-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="searchInput" placeholder="Search products, ingredients, rituals..." />
+        </div>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="quickViewModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal="true"></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="Close product quick view">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <button type="button" class="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
