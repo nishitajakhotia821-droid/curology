@@ -61,7 +61,7 @@
           </button>
         </div>
 
-        <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -84,7 +84,7 @@
             </p>
             <div class="hero-actions">
               <a href="#shop" class="btn btn-primary">SHOP SKINCARE</a>
-              <a href="#about" class="btn btn-secondary">DISCOVER OUR STORY</a>
+              <a href="#routine" class="btn btn-secondary">BUILD YOUR ROUTINE</a>
             </div>
             <div class="hero-stats">
               <div>
@@ -215,7 +215,39 @@
             <button class="filter-btn" type="button" data-filter="Lips">LIPS</button>
           </div>
 
+          <div class="catalog-search reveal">
+            <label class="sr-only" for="catalogSearch">Search products, categories, and ingredients</label>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input id="catalogSearch" type="search" placeholder="Search products, ingredients..." autocomplete="off" />
+            <button id="clearCatalogSearch" type="button" aria-label="Clear product search">Clear</button>
+          </div>
+
           <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="routine section" id="routine">
+        <div class="container routine-inner reveal">
+          <div class="routine-copy">
+            <p class="section-label">A MORE PERSONAL RITUAL</p>
+            <h2>Build your routine.</h2>
+            <p>Choose a skin concern to explore products often selected for that kind of routine. This is product discovery, not a skin assessment.</p>
+            <a class="routine-ingredient-link" href="#ingredients">DISCOVER INGREDIENTS <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="routine-controls">
+            <label for="routineConcern">I’m exploring products for</label>
+            <select id="routineConcern">
+              <option value="">Choose a concern</option>
+              <option value="acne">Acne-prone feel</option>
+              <option value="uneven tone">Uneven tone</option>
+              <option value="dryness">Dryness</option>
+              <option value="dullness">Dullness</option>
+              <option value="oiliness">Oiliness</option>
+              <option value="texture">Texture</option>
+            </select>
+            <p class="routine-note" id="routineNote" aria-live="polite">Products commonly chosen for this concern.</p>
+            <div class="routine-results" id="routineResults"></div>
+          </div>
         </div>
       </section>
 
@@ -410,15 +442,15 @@
 
             <div class="featured-meta">
               <div class="price-wrap">
-                <span class="price-tag">₹3,700</span>
+                <span class="price-tag">₹3,499</span>
                 <div class="stars" aria-label="4.8 out of 5">★★★★★</div>
               </div>
 
               <div class="purchase-panel">
                 <div class="quantity-selector" aria-label="Quantity selector">
-                  <button type="button" class="qty-btn" data-action="decrease">−</button>
-                  <span class="quantity-value">1</span>
-                  <button type="button" class="qty-btn" data-action="increase">+</button>
+                  <button type="button" class="qty-btn" data-action="decrease" aria-label="Decrease featured product quantity">−</button>
+                  <span class="quantity-value" aria-live="polite">1</span>
+                  <button type="button" class="qty-btn" data-action="increase" aria-label="Increase featured product quantity">+</button>
                 </div>
                 <button type="button" class="btn btn-primary add-to-bag" data-product-id="niacinamide-serum">ADD TO BAG</button>
               </div>
@@ -755,7 +787,7 @@
         <h2>Search our rituals</h2>
         <div class="search-field-wrap">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="search" id="searchInput" placeholder="Search products, ingredients, rituals..." />
+          <input type="search" id="searchInput" aria-label="Search products, ingredients, categories, and rituals" placeholder="Search products, ingredients, rituals..." />
         </div>
         <div class="search-results" id="searchResults"></div>
       </div>
@@ -770,6 +802,68 @@
         <div class="modal-content" id="modalContent"></div>
       </div>
     </div>
+
+    <div class="cart-overlay" id="cartOverlay" aria-hidden="true">
+      <button class="cart-scrim" type="button" data-close-cart aria-label="Close shopping bag"></button>
+      <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" tabindex="-1">
+        <div class="cart-heading">
+          <div><p class="section-label">YOUR RITUAL</p><h2 id="cartTitle">Shopping bag <span id="cartItemCount">(0)</span></h2></div>
+          <button class="cart-close" type="button" data-close-cart aria-label="Close shopping bag"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems" aria-live="polite"></div>
+        <div class="cart-empty" id="cartEmpty" hidden>
+          <p>Your skincare ritual starts here.</p>
+          <button class="btn btn-primary" type="button" data-close-cart>CONTINUE SHOPPING</button>
+        </div>
+        <div class="cart-summary" id="cartSummary">
+          <div><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+          <p>Shipping is calculated at checkout.</p>
+          <button class="btn btn-primary cart-checkout" id="checkoutButton" type="button">CONTINUE TO CHECKOUT</button>
+          <button class="text-button" type="button" data-close-cart>Continue shopping</button>
+        </div>
+      </aside>
+    </div>
+
+    <div class="checkout-overlay" id="checkoutOverlay" aria-hidden="true">
+      <div class="checkout-scrim" data-close-checkout></div>
+      <section class="checkout-dialog" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" tabindex="-1">
+        <button class="checkout-close" type="button" data-close-checkout aria-label="Close checkout"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <div class="checkout-view" id="checkoutView">
+          <p class="section-label">DEMO CHECKOUT</p>
+          <h2 id="checkoutTitle">Your details</h2>
+          <p class="checkout-disclaimer">Portfolio demonstration only. No payment is collected and no order is sent.</p>
+          <div class="checkout-layout">
+            <form id="checkoutForm" novalidate>
+              <label>Full name<input name="name" autocomplete="name" required /></label>
+              <label>Email<input name="email" type="email" autocomplete="email" required /></label>
+              <label>Phone<input name="phone" type="tel" autocomplete="tel" required /></label>
+              <label class="checkout-wide">Address<input name="address" autocomplete="street-address" required /></label>
+              <label>City<input name="city" autocomplete="address-level2" required /></label>
+              <label>State<input name="state" autocomplete="address-level1" required /></label>
+              <label>PIN code<input name="pin" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{6}" maxlength="6" required /></label>
+              <p class="checkout-error" id="checkoutError" role="alert"></p>
+              <button class="btn btn-primary" type="submit">PLACE DEMO ORDER</button>
+            </form>
+            <div class="checkout-summary">
+              <h3>Order summary</h3>
+              <div id="checkoutItems"></div>
+              <div class="checkout-total-row"><span>Subtotal</span><strong id="checkoutSubtotal">₹0</strong></div>
+              <div class="checkout-total-row"><span>Delivery</span><strong id="checkoutShipping">₹0</strong></div>
+              <div class="checkout-total-row total"><span>Total</span><strong id="checkoutTotal">₹0</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="order-success" id="orderSuccess" hidden aria-live="polite">
+          <p class="section-label">THANK YOU</p>
+          <h2>Order received successfully.</h2>
+          <p>Your demo order number is <strong id="orderNumber"></strong>.</p>
+          <div class="order-success-summary" id="orderSuccessSummary"></div>
+          <button class="btn btn-primary" type="button" data-finish-order>CONTINUE SHOPPING</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="store-toast" id="storeToast" role="status" aria-live="polite"></div>
 
     <button type="button" class="back-to-top" aria-label="Back to top">
       <i class="fa-solid fa-arrow-up"></i>
